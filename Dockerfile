@@ -12,6 +12,7 @@ RUN yum groupinstall -y 'Development Tools' && \
   yum install -y automake autoconf readline-devel openssl-devel ncurses-devel unixODBC-devel libyaml-devel libxslt-devel libffi-devel libtool ca-certificates git unzip which bash && \
   curl --silent --location https://rpm.nodesource.com/setup_11.x | bash - && \
   yum install -y nodejs && \
+  npm install -g yarn && \
   git clone https://github.com/asdf-vm/asdf.git /opt/asdf --branch $ASDF_VERSION && \
   asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git && \
   asdf install erlang $ERLANG_VERSION && \
